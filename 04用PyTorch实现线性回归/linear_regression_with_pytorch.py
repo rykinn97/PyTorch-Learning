@@ -1,7 +1,7 @@
 import torch
 
 # Prepare dataset
-# ä½¿ç”¨äºŒç»´ç»“æ„æ˜¯PyTorchçš„æ ‡å‡†ç”¨æ³•,ä¿æŒæ•°æ®ç»´åº¦çš„ä¸€è‡´æ€§
+# Ê¹ÓÃ¶şÎ¬½á¹¹ÊÇPyTorchµÄ±ê×¼ÓÃ·¨,±£³ÖÊı¾İÎ¬¶ÈµÄÒ»ÖÂĞÔ
 x_data = torch.Tensor([[1.0], [2.0], [3.0]])
 y_data = torch.Tensor([[2.0], [4.0], [6.0]])
 
@@ -9,7 +9,7 @@ y_data = torch.Tensor([[2.0], [4.0], [6.0]])
 class LinearModel(torch.nn.Module):
     def __init__(self):
         super().__init__()
-        self.linear = torch.nn.Linear(1, 1) # å®Œæ•´å†™æ³•æ˜¯ï¼štorch.nn.modules.linear.Linear
+        self.linear = torch.nn.Linear(1, 1) # ÍêÕûĞ´·¨ÊÇ£ºtorch.nn.modules.linear.Linear
 
     def forward(self, x):
         y_pred = self.linear(x)
@@ -36,8 +36,8 @@ print('w=', model.linear.weight.item())
 print('b=', model.linear.bias.item())
 
 # Test model
-y_test = torch.Tensor([[4.0]])
-print('y_pred = ', model(y_test).item())
+x_test = torch.Tensor([[4.0]])
+print('y_test_pred = ', model(x_test).item())
 
 
 
